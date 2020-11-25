@@ -28,3 +28,7 @@ class PostViewSet(ModelViewSet):
             Q(author=login_user) | Q(author__in=login_user.following_set.all())
         ).filter(created_at__gte=time_since)
         return qs
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+        return super().perform_create(serializer)
