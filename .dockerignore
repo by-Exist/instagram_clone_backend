@@ -1,0 +1,8 @@
+# 로컬 환경에서 build한 이미지로 컨테이너를 띄운 후
+# 로컬 CONTAINERS 내부의 파일을 살펴보며 제외할 파일을 한번 걸러내자.
+/media
+/static
+db.sqlite3
+.git
+.dockerignore
+.Dockerfile

@@ -1,1 +1,5 @@
 -r common.txt
+
+django-storages[azure]~=1.10.1
+gunicorn
+psycopg2-binary
